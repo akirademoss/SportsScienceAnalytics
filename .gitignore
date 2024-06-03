@@ -1,0 +1,10 @@
+# Django 
+db.sqlite3
+.DS_Store
+.venv
+
+# npm
+node_modules/
+npm-debug.log
+
+
