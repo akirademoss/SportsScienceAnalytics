@@ -1,7 +1,7 @@
 # SportsScienceAnalytics
 this is a fullstack mini-side project to demo a sports science analytics application, it uses react + vite, react hooks, django, sql, and AWS
 
-## Backend Django Setup
+## Backend Django Setup - Will Update with Project Specific Setup Steps Soon This is Just "Getting Started" Steps
 
 #### Setting up the virtual environment
 ```
