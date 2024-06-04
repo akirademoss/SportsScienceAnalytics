@@ -67,30 +67,8 @@ manage.py  mysite
 
 ## Frontend React Setup
 
-#### Create using Vite.  Here I use a specific version based off a tutorial but if you want the latest use vite@latest instead of the specific version
-```
-mclovin@mclovin-Z97MX-Gaming-5:~/Desktop/Sports Analytics App$ npm create vite@4.1.0
-Need to install the following packages:
- create-vite@4.1.0
-Ok to proceed? (y)
-✔ Project name: …  frontend
-✔ Select a framework: › React
-✔ Select a variant: › JavaScript
+#### Project uses React + Vite - To get frontend up and running use the following commands
 
-
-Scaffolding project in /home/mclovin/Desktop/Sports Analytics App/frontend...
-
-
-Done. Now run:
-
-
- cd frontend
- npm install
- npm run dev
-
-```
-
-#### Install and run the frontend
 ```
 mclovin@mclovin-Z97MX-Gaming-5:~/Desktop/Sports Analytics App$ cd frontend
 mclovin@mclovin-Z97MX-Gaming-5:~/Desktop/Sports Analytics App/frontend$ npm install
