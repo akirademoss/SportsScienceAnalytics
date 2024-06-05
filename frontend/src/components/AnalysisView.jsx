@@ -17,8 +17,8 @@ function AnalysisView() {
                     
                     <div className='upload-container'>
                         <div className='button-container'>
-                            <form onSubmit={handleSubmit(onSubmit)}>
-                                <input {...register("picture", { required: true })} type="file" />
+                        <form onSubmit={handleSubmit(onSubmit)}>
+                                <input {...register("csv", { required: true })} type="file" />
                                 <button>Submit</button>
                             </form>
                   

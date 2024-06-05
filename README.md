@@ -55,9 +55,9 @@ Available subcommands:
 
 #### Create a Django project directory structure for the given project name in the current directory or the given destination
 ```
-(.venv) mclovin@mclovin-Z97MX-Gaming-5:~/Desktop/Sports Analytics App/backend$ django-admin startproject mysite .
+(.venv) mclovin@mclovin-Z97MX-Gaming-5:~/Desktop/Sports Analytics App/backend$ django-admin startproject server .
 (.venv) mclovin@mclovin-Z97MX-Gaming-5:~/Desktop/Sports Analytics App/backend$ ls
-manage.py  mysite
+manage.py  server
 ```
 
 #### Here we will run the actual server
