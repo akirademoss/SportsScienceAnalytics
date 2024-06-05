@@ -12,12 +12,6 @@ mclovin@mclovin-Z97MX-Gaming-5:~/Desktop/Sports Analytics App/backend$ source .v
 #### Installing requirements from requirements.txt and run the server
 ```
 (.venv) mclovin@mclovin-Z97MX-Gaming-5:~/Desktop/Sports Analytics App/backend$ pip install -r ./requirements.txt
-(.venv) mclovin@mclovin-Z97MX-Gaming-5:~/Desktop/Sports Analytics App/backend$ ls
-manage.py  server
-```
-
-#### Here we will run the actual server
-```
 (.venv) mclovin@mclovin-Z97MX-Gaming-5:~/Desktop/Sports Analytics App/backend$ python3 manage.py runserver
 ```
 
