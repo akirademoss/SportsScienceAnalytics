@@ -9,53 +9,9 @@ mclovin@mclovin-Z97MX-Gaming-5:~/Desktop/Sports Analytics App/backend$ python3 -
 mclovin@mclovin-Z97MX-Gaming-5:~/Desktop/Sports Analytics App/backend$ source .venv/bin/activate
 ```
 
-#### Installing the Django framework
+#### Installing requirements from requirements.txt and run the server
 ```
-(.venv) mclovin@mclovin-Z97MX-Gaming-5:~/Desktop/Sports Analytics App/backend$ python -m pip install django
-```
-
-#### Utilizing Commands
-```
-(.venv) mclovin@mclovin-Z97MX-Gaming-5:~/Desktop/Sports Analytics App/backend$ django-admin
-
-
-Type 'django-admin help <subcommand>' for help on a specific subcommand.
-
-
-Available subcommands:
-
-
-[django]
-   check
-   compilemessages
-   createcachetable
-   dbshell
-   diffsettings
-   dumpdata
-   flush
-   inspectdb
-   loaddata
-   makemessages
-   makemigrations
-   migrate
-   runserver
-   sendtestemail
-   shell
-   showmigrations
-   sqlflush
-   sqlmigrate
-   sqlsequencereset
-   squashmigrations
-   startapp
-   startproject
-   test
-   testserver
-
-```
-
-#### Create a Django project directory structure for the given project name in the current directory or the given destination
-```
-(.venv) mclovin@mclovin-Z97MX-Gaming-5:~/Desktop/Sports Analytics App/backend$ django-admin startproject server .
+(.venv) mclovin@mclovin-Z97MX-Gaming-5:~/Desktop/Sports Analytics App/backend$ pip install -r ./requirements.txt
 (.venv) mclovin@mclovin-Z97MX-Gaming-5:~/Desktop/Sports Analytics App/backend$ ls
 manage.py  server
 ```
