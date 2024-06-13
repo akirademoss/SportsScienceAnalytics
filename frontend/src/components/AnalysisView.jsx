@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './AnalysisView.css'
 import { useForm } from "react-hook-form";
-import { DevTool } from "@hookform/devtools";
 import axios from "axios";
 
 
@@ -23,6 +22,8 @@ function AnalysisView() {
       
       const onSubmit = (data) => {
         console.log(data)
+        console.log(data.csv)
+        {/**axios.post('http://127.0.0.1:8000/api/score/')*/}
     }
 
       const handleChange = (e) => {
