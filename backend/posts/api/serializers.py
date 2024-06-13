@@ -1,8 +1,8 @@
 from rest_framework.serializers import ModelSerializer
-from ..models import Post
+from ..models import Score
 
-class PostSerializer(ModelSerializer):
+class ScoreSerializer(ModelSerializer):
     class Meta:
-        model = Post
-        fields = ('id', 'title', 'body')
+        model = Score
+        fields = ('id', 'name', 'score')
         

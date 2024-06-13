@@ -1,7 +1,7 @@
 from rest_framework.viewsets import ModelViewSet
-from ..models import Post
-from .serializers import PostSerializer
+from ..models import Score
+from .serializers import ScoreSerializer
 
-class PostViewSet(ModelViewSet):
-    queryset = Post.objects.all()
-    serializer_class = PostSerializer
+class ScoreViewSet(ModelViewSet):
+    queryset = Score.objects.all()
+    serializer_class = ScoreSerializer
