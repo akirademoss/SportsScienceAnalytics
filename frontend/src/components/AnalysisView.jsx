@@ -7,39 +7,48 @@ import axios from "axios";
 
 function AnalysisView() {
     const { register, handleSubmit } = useForm()
+    const [file, setFile] = useState('')
+
+
+
     const [values, setValues] = useState({
         name: '',
         score: ''
-      })
+    })
 
-      const reset = () => {
+    const reset = () => {
         setValues({
-          name: '',
-          score: ''
-        }) 
-      }
-       
-      
-      const onSubmit = (data) => {
-        console.log(data)
-        console.log(data.csv)
-        {/**axios.post('http://127.0.0.1:8000/api/score/')*/}
+            name: '',
+            score: ''
+        })
     }
 
-      const handleChange = (e) => {
-        setValues( { ...values, [e.target.name]: e.target.value})
-      }
+    function handleFile(e) {
+        console.log(e.target.files)
+        setFile(e.target.files[0])
+    }
 
-    const form = useForm();
+    const handleChange = (e) => {
+        setValues({ ...values, [e.target.name]: e.target.value })
+    }
+
+    const onSubmit = (e) => {
+        const form = new FormData();
+        form.append("file", file)
+        console.log(file)
+        axios.post('http://127.0.0.1:8000/api/upload/', form)
+            .then(response => console.log(response))
+            .catch(err => console.log(err))
+    }
 
     const handleSubmitScore = (e) => {
         e.preventDefault()
         reset();
         const name = values.name
         const score = values.score
-        axios.post('http://127.0.0.1:8000/api/score/', {name, score})
-        .then(response => console.log(response))
-        .catch(err => console.log(err))
+        axios.post('http://127.0.0.1:8000/api/score/', { name, score })
+            .then(response => console.log(response))
+            .catch(err => console.log(err))
     }
 
     return (
@@ -50,10 +59,10 @@ function AnalysisView() {
 
                     <div className='upload-container'>
                         <div className='button-container'>
-                            <form onSubmit={handleSubmit(onSubmit)}>
-                                <input {...register("csv", { required: true })} type="file" />
-                                <button>Submit</button>
-                            </form>
+                            <div>
+                                <input type="file" name="file" onChange={handleFile}/>
+                                <button onClick={onSubmit}>Submit</button>
+                            </div>
 
                         </div>
                         <div className='file-upload'>
@@ -70,14 +79,14 @@ function AnalysisView() {
                         </div>
                         <form className='form-container' onSubmit={handleSubmitScore}>
                             <label htmlFor="name">
-                                Name: <input type="text" className="name" name="name" onChange={ handleChange } value={values.name} />
+                                Name: <input type="text" className="name" name="name" onChange={handleChange} value={values.name} />
                             </label>
                             <label htmlFor="score">
-                                Score: <input type="text" className="score" name="score" onChange={ handleChange } value={values.score}/>
+                                Score: <input type="text" className="score" name="score" onChange={handleChange} value={values.score} />
                             </label>
                             <button>Add</button>
                         </form>
-                
+
                     </div>
                 </div>
 

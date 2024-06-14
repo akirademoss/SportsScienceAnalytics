@@ -5,5 +5,5 @@ from .views import UploadView
 
 post_router = DefaultRouter()
 post_router.register(r'score', ScoreViewSet)
-#post_router.register(r'upload', UploadView, basename="upload")
+
 
