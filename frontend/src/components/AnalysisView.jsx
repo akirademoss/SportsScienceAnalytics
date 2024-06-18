@@ -1,21 +1,15 @@
 import React, { useState } from 'react'
 import './AnalysisView.css'
-import { useForm } from "react-hook-form";
 import axios from "axios";
 
 
 
 function AnalysisView() {
-    const { register, handleSubmit } = useForm()
     const [file, setFile] = useState('')
-
-
-
     const [values, setValues] = useState({
         name: '',
         score: ''
     })
-
     const reset = () => {
         setValues({
             name: '',
@@ -28,6 +22,7 @@ function AnalysisView() {
         setFile(e.target.files[0])
     }
 
+
     const handleChange = (e) => {
         setValues({ ...values, [e.target.name]: e.target.value })
     }
@@ -36,7 +31,7 @@ function AnalysisView() {
         const form = new FormData();
         form.append("file", file)
         console.log(file)
-        axios.post('http://127.0.0.1:8000/api/upload/', form)
+        axios.post('http://0.0.0.0:8000/api/upload/', form)
             .then(response => console.log(response))
             .catch(err => console.log(err))
     }
@@ -46,7 +41,7 @@ function AnalysisView() {
         reset();
         const name = values.name
         const score = values.score
-        axios.post('http://127.0.0.1:8000/api/score/', { name, score })
+        axios.post('http://0.0.0.0:8000/api/score/', { name, score })
             .then(response => console.log(response))
             .catch(err => console.log(err))
     }

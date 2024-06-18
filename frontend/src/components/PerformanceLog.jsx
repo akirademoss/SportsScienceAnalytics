@@ -4,33 +4,11 @@ import './PerformanceLog.css'
 function PerformanceLog() {
     const [title, setLogTitle] = useState([])
     const [log, setLog] = useState([])
-    {/** const [log1, setLog1] = useState([])
 
-    const getLogData = async () =>{
-        try {
-            
-        }
-    };
-    
-    
-    useEffect(() => {
-        fetch('http://127.0.0.1:8000/api/score/')
-        .then(res => res.json())
-        .then(data => {
-            setLog1(Object.keys(data.score[0]))
-            setLog(data.score)
-        })
-        console.log(log)
-        console.log(log1)
-
-    },[])*/}
-
-
-    {/*Setting & fetching data to test api*/}
     useEffect(()=> {
       async function fetchData(){
         try{
-          const response = await fetch('http://127.0.0.1:8000/api/score/')
+          const response = await fetch('http://0.0.0.0:8000/api/score/')
           if (!response.ok) {
             throw new Error('Network response was not ok');
           }
