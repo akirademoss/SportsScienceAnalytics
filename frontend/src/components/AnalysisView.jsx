@@ -31,7 +31,7 @@ function AnalysisView() {
         const form = new FormData();
         form.append("file", file)
         console.log(file)
-        axios.post('http://0.0.0.0:8000/api/upload/', form)
+        axios.post(import.meta.env.VITE_API_URL + 'api/upload/', form)
             .then(response => console.log(response))
             .catch(err => console.log(err))
     }
@@ -41,7 +41,7 @@ function AnalysisView() {
         reset();
         const name = values.name
         const score = values.score
-        axios.post('http://0.0.0.0:8000/api/score/', { name, score })
+        axios.post(import.meta.env.VITE_API_URL + 'api/score/', { name, score })
             .then(response => console.log(response))
             .catch(err => console.log(err))
     }

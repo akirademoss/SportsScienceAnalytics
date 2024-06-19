@@ -8,7 +8,7 @@ function PerformanceLog() {
     useEffect(()=> {
       async function fetchData(){
         try{
-          const response = await fetch('http://0.0.0.0:8000/api/score/')
+          const response = await fetch(import.meta.env.VITE_API_URL + 'api/score/')
           if (!response.ok) {
             throw new Error('Network response was not ok');
           }
