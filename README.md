@@ -29,6 +29,7 @@ mclovin@mclovin-Z97MX-Gaming-5:~/Desktop/SportsScienceAnalytics/frontend$ npm ru
 # When running on AWS EC2 instance use following commands
 
 ## On Ubuntu 20.02+ will need Python 3.7 for this project install on ec2 instance
+
 '''
 ubuntu@ip:~$ sudo apt install software-properties-common
 ubuntu@ip:~$ sudo add-apt-repository ppa:deadsnakes/ppa
