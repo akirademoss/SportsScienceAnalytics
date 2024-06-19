@@ -30,13 +30,13 @@ mclovin@mclovin-Z97MX-Gaming-5:~/Desktop/SportsScienceAnalytics/frontend$ npm ru
 
 ## On Ubuntu 20.02+ will need Python 3.7 for this project install on ec2 instance
 
-'''
-ubuntu@ip:~/$ sudo apt install software-properties-common
-ubuntu@ip:~/$ sudo add-apt-repository ppa:deadsnakes/ppa
-ubuntu@ip:~/$ sudo apt update
-ubuntu@ip:~/$ sudo apt install python3.7
-ubuntu@ip:~/$ sudo apt-get install python3.7-venv
-'''
+```
+ubuntu@ip:~$ sudo apt install software-properties-common
+ubuntu@ip:~$ sudo add-apt-repository ppa:deadsnakes/ppa
+ubuntu@ip:~$ sudo apt update
+ubuntu@ip:~$ sudo apt install python3.7
+ubuntu@ip:~$ sudo apt-get install python3.7-venv
+```
 
 ## Backend Django Setup
 
