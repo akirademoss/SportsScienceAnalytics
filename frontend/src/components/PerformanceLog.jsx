@@ -13,10 +13,11 @@ function PerformanceLog() {
             throw new Error('Network response was not ok');
           }
           const result = await response.json();
+          const arr = Object.keys(result[0])
+          arr.shift()
           console.log(result)
-          console.log(Object.keys(result[0]))
-          console.log(result[0].score)
-          setLogTitle(Object.keys(result[0]));
+          console.log(arr)
+          setLogTitle(arr);
           setLog(result);
         } catch(error) {
           console.error('Error fetching data:', error);
@@ -37,7 +38,7 @@ function PerformanceLog() {
                         <thead>
                             <tr>
                                 {title.map((t,i) =>(
-                                    <th key={i}>{t}</th>
+                                    <th key={i}  className='th'>{t}</th>
                                 ))}
                             </tr>
                         </thead>
@@ -45,9 +46,8 @@ function PerformanceLog() {
                             {
                                 log.map((log, i)=> (
                                     <tr key={i}>
-                                        <td>{log.id}</td>
-                                        <td>{log.name}</td>
-                                        <td>{log.score}</td>
+                                        <td className='td'>{log.name}</td>
+                                        <td className='td'>{log.score}</td>
                                     </tr>
                                 ))
                             }
