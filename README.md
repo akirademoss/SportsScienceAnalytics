@@ -64,6 +64,7 @@ ubuntu@ip:~/SportsScienceAnalytics/backend$ source .venv/bin/activate
 ubuntu@ip:~/SportsScienceAnalytics$ cd frontend
 ubuntu@ip:~/SportsScienceAnalytics/frontend$ npm install
 ubuntu@ip:~/SportsScienceAnalytics/frontend$ npm run dev -- --host
+```
 
 ## Verify things are running
 to verify things are running copy and paste your public IP address into the browser url section and append :5173.  Once you have verified things are working you can stop the processes and proceed to the next step.
