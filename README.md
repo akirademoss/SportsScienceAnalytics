@@ -67,7 +67,7 @@ ubuntu@ip:~/SportsScienceAnalytics/frontend$ npm run dev -- --host
 ```
 
 ## Verify your inbound roles in your security group are configured properly - see picture below
-Your security group acts as a virtual firewall for your EC2 instance - to test that your setup is working on your EC2 instance you need to configure your inbound rules properly.  I have masked my details for security but configure to your specific IP address.  Yours will populate when selected.
+Your security group acts as a virtual firewall for your EC2 instance - to test that your setup is working on your EC2 instance you need to configure your inbound rules properly and include the ports that your frontend and backend communicate on.  I have masked my details for security but configure to your specific IP address.  Yours will populate when selected.
 
 ![SSA2](https://github.com/akirademoss/SportsScienceAnalytics/assets/8731829/cd8f5a66-2dbc-4a66-9a85-1b35893a0825)
 
