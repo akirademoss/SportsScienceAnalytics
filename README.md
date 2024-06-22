@@ -66,6 +66,9 @@ ubuntu@ip:~/SportsScienceAnalytics/frontend$ npm install
 ubuntu@ip:~/SportsScienceAnalytics/frontend$ npm run dev -- --host
 ```
 
+## Verify your inbound roles in your security group are configured properly - see picture below
+Your security group acts as a virtual firewall for your EC2 instance - to test that your setup is working on your EC2 instance you need to configure your inbound rules properly.  I have masked my details for security but configure to your specific IP address.  Yours will populate when selected.
+
 ## Verify things are running
 to verify things are running copy and paste your public IP address into the browser url section and append :5173.  Once you have verified things are working you can stop the processes and proceed to the next step.
 
