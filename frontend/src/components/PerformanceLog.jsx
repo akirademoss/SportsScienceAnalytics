@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useReducer } from 'react'
 import './PerformanceLog.css'
+import axios from "axios";
 
 function PerformanceLog() {
     const [title, setLogTitle] = useState([])
@@ -21,11 +22,20 @@ function PerformanceLog() {
           setLog(result);
         } catch(error) {
           console.error('Error fetching data:', error);
+          console.log(log)
         }
       }
       
       fetchData();
+      
     }, [])
+
+    const onClear = (e) => {
+        axios.delete(import.meta.env.VITE_API_URL + 'api/score/')
+            .then(response => console.log(response))
+            .catch(err => console.log(err))   
+        setLog([])
+    }
 
     return (
         <>
@@ -34,12 +44,15 @@ function PerformanceLog() {
                     <h1>Player Performance Log</h1>
                 </div>
                 <div className='header'>
+                <button onClick={onClear}>Clear Log</button>
+                { log != [] &&
                     <table className='table'>
                         <thead>
                             <tr>
-                                {title.map((t,i) =>(
-                                    <th key={i}  className='th'>{t}</th>
-                                ))}
+                               
+                                    <th  className='th'>Name</th>
+                                    <th  className='th'>Score</th>
+                                
                             </tr>
                         </thead>
                         <tbody>
@@ -53,7 +66,7 @@ function PerformanceLog() {
                             }
                         </tbody>
                     </table>
-               
+                }
                 </div>
 
             </plog>

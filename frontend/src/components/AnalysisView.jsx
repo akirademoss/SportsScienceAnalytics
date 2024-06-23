@@ -7,13 +7,11 @@ import axios from "axios";
 function AnalysisView() {
     const [file, setFile] = useState('')
     const [values, setValues] = useState({
-        name: '',
-        score: ''
+        name: ''
     })
     const reset = () => {
         setValues({
-            name: '',
-            score: ''
+            name: ''
         })
     }
     const [hrScore, setScore] = useState('')
@@ -43,8 +41,7 @@ function AnalysisView() {
         e.preventDefault()
         reset();
         const name = values.name
-        const score = values.score
-        console.log("test")
+        const score = hrScore
         axios.post(import.meta.env.VITE_API_URL + 'api/score/', { name, score })
             .then(response => console.log(response))
             .catch(err => console.log(err))
@@ -94,15 +91,12 @@ function AnalysisView() {
                             </div>
 
                         </div>
-                        <form className='form-container' onSubmit={handleSubmitScore}>
+                        <div className='form-container'>
                             <label htmlFor="name">
                                 Name: <input type="text" className="name" name="name" onChange={handleChange} value={values.name} />
                             </label>
-                            <label htmlFor="score">
-                                Score: <input type="text" className="score" name="score" onChange={handleChange} value={values.score} />
-                            </label>
-                            <button>Add</button>
-                        </form>
+                            <button onClick={handleSubmitScore}>Add Score</button>
+                        </div>
 
                     </div>
                 </div>

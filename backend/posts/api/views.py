@@ -12,6 +12,11 @@ class ScoreViewSet(ModelViewSet):
     queryset = Score.objects.all()
     serializer_class = ScoreSerializer
 
+   
+    def delete(self, request):
+        Score.objects.all().delete()
+        return Response()
+
 class UploadView(APIView):#request
     
     def post(self, request, format=None):
