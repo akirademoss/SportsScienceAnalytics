@@ -20,11 +20,11 @@
   }
 
   .table {
-    border: 1px solid;
+
   }
 
   .th {
-    text-align: left;
+    justify-content: left;
     border: 1px solid;
   }
 

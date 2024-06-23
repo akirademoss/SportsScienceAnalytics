@@ -25,7 +25,7 @@ class UploadView(APIView):#request
         score = extract_score(fpath)
         print(score)
         os.remove(fpath)
-        return Response(status=200)
+        return Response(score)
 
 #Converts a file to csv format
 def extract_score(fpath): 
@@ -34,9 +34,15 @@ def extract_score(fpath):
     arr = df["Value"].to_numpy()
     avg_heart_rate = np.mean(arr)
     print(avg_heart_rate)
-    if avg_heart_rate > 78:
+    if avg_heart_rate >= 165:
         score = "Excellent"
-    else:
-        score = "Good"
+    if 165 > avg_heart_rate >= 140:
+        score = "Good"    
+    if 140 > avg_heart_rate >= 120:
+        score = "Fair"
+    if 120 > avg_heart_rate >= 100:
+        score = "Poor"
+    if avg_heart_rate < 100:
+        score = "Very Poor"
     return score
     

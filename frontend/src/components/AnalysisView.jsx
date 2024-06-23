@@ -16,6 +16,7 @@ function AnalysisView() {
             score: ''
         })
     }
+    const [hrScore, setScore] = useState('')
 
     function handleFile(e) {
         console.log(e.target.files)
@@ -32,8 +33,10 @@ function AnalysisView() {
         form.append("file", file)
         console.log(file)
         axios.post(import.meta.env.VITE_API_URL + 'api/upload/', form)
-            .then(response => console.log(response))
+            .then(response => setScore(response.data))
             .catch(err => console.log(err))
+        
+        console.log("test")
     }
 
     const handleSubmitScore = (e) => {
@@ -41,9 +44,11 @@ function AnalysisView() {
         reset();
         const name = values.name
         const score = values.score
+        console.log("test")
         axios.post(import.meta.env.VITE_API_URL + 'api/score/', { name, score })
             .then(response => console.log(response))
             .catch(err => console.log(err))
+
     }
 
     return (
@@ -61,14 +66,31 @@ function AnalysisView() {
 
                         </div>
                         <div className='file-upload'>
-                            <h3>Upload a file and our analytics software will analyze the player's performance.</h3>
+                            <h3>Upload fitbit time-series .csv file and our analytics software will analyze the player's performance.</h3>
                         </div>
                     </div>
 
                     <div className='analytics-container'>
                         <div className='analytics-box'>
                             <div className='performance-box'>
+                                { hrScore == "Excellent" &&
+                                <img className='img' src= '/score-excellent.jpeg' />
+                                }
+                                { hrScore == "Good" &&
+                                <img className='img' src= '/score-good.jpeg' />
+                                }
+                                { hrScore == "Fair" &&
+                                <img className='img' src= '/score-fair.jpeg' />
+                                }
+                                { hrScore == "Poor" &&
+                                <img className='img' src= '/score-poor.jpeg' />
+                                }
+                                { hrScore == "Very Poor" &&
+                                <img className='img' src= '/score-very-poor.jpeg' />
+                                }
+                                { hrScore == "" &&
                                 <h3>Waiting for player data to calculate score.</h3>
+                                }
                             </div>
 
                         </div>
