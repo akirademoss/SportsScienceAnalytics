@@ -166,7 +166,7 @@ sudo systemctl status mybackend.service
 sudo systemctl restart mybackend.service myapp.service
 ```
 
-#### TODO 
+#### TODO: 
 - [ ] Finish desktop version of app and upload screenshot demo gif to repo
 - [ ] Solve the SSL issue related to caddy and reverse proxy and routing to our domain with Route 53 add brief instructions on that 
 - [ ] Create a version that works on mobile devices
