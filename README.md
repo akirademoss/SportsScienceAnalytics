@@ -1,5 +1,9 @@
 # SportsScienceAnalytics
-This is a fullstack mini-side project to demo a lightweight sports science analytics application, it uses react + vite, react hooks, django, sql, and is easily deployable to AWS free tier EC2 instance.  This repo also includes general deployment instructions.
+This is a fullstack mini-side project to demo a lightweight sports science analytics application, it uses react + vite, react hooks, django, sql, and is easily deployable to AWS free tier EC2 instance.  This repo also includes general deployment instructions. Below is a demo.
+
+![sportssciencedemo](https://github.com/akirademoss/SportsScienceAnalytics/assets/8731829/89e23419-8b77-46ef-913d-2df4a9c7d866)
+
+Link to sample data for testing: https://github.com/akirademoss/fitbit-heartrate-data
 
 ## Backend Django Setup
 
@@ -167,8 +171,8 @@ sudo systemctl restart mybackend.service myapp.service
 ```
 
 #### TODO: 
-- [ X ] Upload screenshare gif demo to repo
-- [ ] Link repo with sample data
+- [x] Upload screenshare gif demo to repo
+- [x] Link repo with sample data
 - [ ] Get updates to Player Performance log showing without having to refresh browser
 - [ ] Solve the SSL issue related to caddy and reverse proxy and routing to our domain with Route 53 add brief instructions on that 
 - [ ] Create a version that works on mobile devices
