@@ -3,7 +3,6 @@ import './PerformanceLog.css'
 import axios from "axios";
 
 function PerformanceLog() {
-    const [title, setLogTitle] = useState([])
     const [log, setLog] = useState([])
 
     useEffect(()=> {
@@ -18,7 +17,6 @@ function PerformanceLog() {
           arr.shift()
           console.log(result)
           console.log(arr)
-          setLogTitle(arr);
           setLog(result);
         } catch(error) {
           console.error('Error fetching data:', error);
@@ -39,7 +37,7 @@ function PerformanceLog() {
 
     return (
         <>
-            <plog className="performance-log">
+            <div className="performance-log">
                 <div className='header'>
                     <h1>Player Performance Log</h1>
                 </div>
@@ -50,8 +48,8 @@ function PerformanceLog() {
                         <thead>
                             <tr>
                                
-                                    <th  className='th'>Name</th>
-                                    <th  className='th'>Score</th>
+                                <th  className='th'>Name</th>
+                                <th  className='th'>Score</th>
                                 
                             </tr>
                         </thead>
@@ -69,7 +67,7 @@ function PerformanceLog() {
                 }
                 </div>
 
-            </plog>
+            </div>
         </>
     )
 }

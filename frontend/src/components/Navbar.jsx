@@ -7,7 +7,7 @@ function Navbar() {
       <nav className="navbar">
         <div className="navbar-container">
           <div className="runner-img">
-            <img src= '/runner3.png' />
+            <img src= '/runner4.png' />
           </div>
           <h1>Player Performance Analysis Dashboard</h1>
         </div>

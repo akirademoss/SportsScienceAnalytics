@@ -14,9 +14,6 @@ function App() {
       <div>
         <AnalysisView/>
       </div>
-      <div>
-        <PerformanceLog/>
-      </div>
     </div>
   )
 }
