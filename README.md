@@ -3,6 +3,8 @@ This is a fullstack mini-side project to demo a lightweight sports science analy
 
 ![sportssciencedemo](https://github.com/akirademoss/SportsScienceAnalytics/assets/8731829/89e23419-8b77-46ef-913d-2df4a9c7d866)
 
+The app is very simple and demonstrates a very basic sports science analytics app.  Currently the data analytics computes a score based on the average heartrate.  
+
 Link to sample data for testing: https://github.com/akirademoss/fitbit-heartrate-data
 ## Prerequisites
 You will need to have node.js installed, additionally this was made with python3.7.  If you have a newer version and the project is not building you will need to install python3.7 on your machine.
