@@ -5,7 +5,7 @@ This is a fullstack mini-side project to demo a lightweight sports science analy
 
 Link to sample data for testing: https://github.com/akirademoss/fitbit-heartrate-data
 ## Prerequisites
-You will need to have node.js installed, additionally this was made with python3.7.  If you have a newer version and the project is not building you will need to install python3.7 on your machine along with the corresponding venv and create your venv with python3.7. 
+You will need to have node.js installed, additionally this was made with python3.7.  If you have a newer version and the project is not building you will need to install python3.7 on your machine.
 
 ## Backend Django Setup
 
