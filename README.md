@@ -177,6 +177,7 @@ sudo systemctl restart mybackend.service myapp.service
 #### TODO: 
 - [x] Upload screenshare gif demo to repo
 - [x] Link repo with sample data
-- [ ] Solve on AWS EC2 instance SSL issue (see repo issue) related to caddy and reverse proxy and routing to our domain with Route 53 add brief instructions on that 
+- [ ] Solve on AWS EC2 instance SSL issue (see repo issue) related to caddy and reverse proxy
+- [ ] After domain name finishes propogating and SSL error is resolved, work on adding brief instructions on routing from our domain to public IP address on our EC2 instance with Route 53 
 - [ ] Get updates to Player Performance log showing without having to refresh browser
 - [ ] Update to work well on mobile devices
