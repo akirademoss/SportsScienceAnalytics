@@ -167,7 +167,7 @@ sudo systemctl restart mybackend.service myapp.service
 ```
 
 #### TODO: 
-- [ ] Upload screenshare gif demo to repo
+- [ X ] Upload screenshare gif demo to repo
 - [ ] Link repo with sample data
 - [ ] Get updates to Player Performance log showing without having to refresh browser
 - [ ] Solve the SSL issue related to caddy and reverse proxy and routing to our domain with Route 53 add brief instructions on that 
