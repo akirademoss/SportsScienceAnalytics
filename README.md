@@ -87,6 +87,16 @@ to verify things are running copy and paste your public IP address into the brow
 
 ## Create and run frontend service
 
+#### Create a new file for your environment variables and open the file in Vim:
+```
+sudo vim /etc/app.env
+```
+
+#### In Vim, add your variables in the format VARIABLE=value. Here X.XX.XX.XXX = public IP of the EC2 instance
+```
+VITE_API_URL=//X.XX.XX.XXX:8000/
+```
+
 #### Navigate to the systemd directory and create a new service file, myapp.service.
 ```
 sudo vim /etc/systemd/system/myapp.service
